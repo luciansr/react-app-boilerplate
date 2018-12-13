@@ -9,10 +9,16 @@ const Login = () => <div>
   <Link to={indexUrl}>Home</Link>
 </div>;
 
+const Empty = () => <div>
+  <h2>Empty</h2>
+  <Link to={indexUrl}>Home</Link>
+</div>;
+
 const AppRouter = () => (
   <Router>
     <div>
       {/* <Redirect exact from="/" to="login" /> */}
+      <Route exact path="/" component={Empty} />
       <Route path={indexUrl} component={Index} />
       <Route path="/login" component={Login} />
     </div>
