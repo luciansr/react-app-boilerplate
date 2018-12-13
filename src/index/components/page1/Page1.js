@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button, Container, Row, Col } from 'reactstrap';
 import Editor from '../shared/editor/Editor';
+import './Page1.css';
 
 class Page1 extends Component {
     render() {
@@ -18,7 +19,7 @@ class Page1 extends Component {
         return (
             <div className="page1">
                 <Container>
-                    <Row>
+                    <Row className="page1-first-row">
                         <Col><Button>Teste</Button></Col>
                     </Row>
                     <Row>
