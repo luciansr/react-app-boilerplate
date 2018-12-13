@@ -4,7 +4,7 @@ import { Jumbotron, Button } from 'reactstrap';
 class Page2 extends Component {
   render() {
     return (
-        <div className="page1">
+        <div className="page2">
             <Jumbotron>
                 <h1 className="display-3">Hello, world! Page 2!</h1>
                 <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>

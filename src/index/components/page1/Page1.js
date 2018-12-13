@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button, Container, Row, Col } from 'reactstrap';
 import Editor from '../shared/editor/Editor';
-import './Page1.css';
 
 class Page1 extends Component {
     render() {
-        var htmlCode = 
-`<!DOCTYPE html>
+
+        const page1ContainerStyle = {
+            padding: 20
+        };
+
+        const page1FirstRowStyle = {
+            paddingBottom: 10
+        };
+        
+        var htmlCode =
+            `<!DOCTYPE html>
 <html>
 <body>
 
@@ -17,9 +25,9 @@ class Page1 extends Component {
 </html>
 `;
         return (
-            <div className="page1">
+            <div style={page1ContainerStyle}>
                 <Container>
-                    <Row className="page1-first-row">
+                    <Row style={page1FirstRowStyle}>
                         <Col><Button>Teste</Button></Col>
                     </Row>
                     <Row>
