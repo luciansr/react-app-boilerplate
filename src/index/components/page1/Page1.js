@@ -32,7 +32,7 @@ class Page1 extends Component {
                     </Row>
                     <Row>
                         <Col>
-                            <Editor language="json" code="Teste"></Editor>
+                            <Editor language="json" code={`{ "teste" : "texto" }`}></Editor>
                         </Col>
                         <Col>
                             <Editor language="html" code={htmlCode}></Editor>

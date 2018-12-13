@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
-import MonacoEditor from 'react-monaco-editor';
+import AceEditor from 'react-ace';
+
+import 'brace/mode/javascript';
+import 'brace/mode/html';
+import 'brace/mode/json';
+import 'brace/theme/dracula';
 
 class Editor extends Component {
   constructor(props) {
@@ -14,7 +18,7 @@ class Editor extends Component {
     editor.focus();
   }
   onChange(newValue, e) {
-    console.log('onChange', newValue, e);
+    console.log('change',newValue);
   }
   render() {
     const code = this.state.code;
@@ -23,16 +27,13 @@ class Editor extends Component {
     };
 
     return (
-      <MonacoEditor
-        width="500"
-        height="600"
-        language={this.props.language}
-        // language="javascript"
-        theme="vs-dark"
-        value={code}
-        options={options}
+      <AceEditor
+        mode={this.props.language}
+        theme="dracula"
         onChange={this.onChange}
-        editorDidMount={this.editorDidMount}
+        defaultValue={this.props.code}
+        name="UNIQUE_ID_OF_DIV"
+        editorProps={{$blockScrolling: true}}
       />
     );
   }
