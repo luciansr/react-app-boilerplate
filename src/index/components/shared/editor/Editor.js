@@ -24,7 +24,7 @@ class Editor extends Component {
 
     return (
       <MonacoEditor
-        width="400"
+        width="500"
         height="600"
         language={this.props.language}
         // language="javascript"
