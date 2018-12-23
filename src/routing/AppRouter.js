@@ -2,12 +2,9 @@ import React from "react";
 import { HashRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 import Index from '../index/Index';
-const indexUrl = "/index";
+import Login from '../login/Login';
 
-const Login = () => <div>
-  <h2>Login</h2>
-  <Link to={indexUrl}>Home</Link>
-</div>;
+const indexUrl = "/index";
 
 const Empty = () => <div>
   <h2>Empty</h2>
