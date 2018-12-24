@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Jumbotron, Button } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
@@ -9,7 +10,7 @@ const indexUrl = "/index";
 class Login extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       username: '',
       password: ''
@@ -20,7 +21,7 @@ class Login extends Component {
   }
 
   onSubmit(e) {
-    e.preventDefault();    
+    e.preventDefault();
     this.props.getAuthToken(this.state.username, this.state.password);
   }
 
@@ -37,8 +38,8 @@ class Login extends Component {
         <form onSubmit={this.onSubmit}>
           <label>Username</label>
           <br />
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="username"
             value={this.state.username}
             onChange={this.onChange}
@@ -46,9 +47,9 @@ class Login extends Component {
           <br />
           <label>Password</label>
           <br />
-          <input 
-            type="text" 
-            name="password" 
+          <input
+            type="text"
+            name="password"
             value={this.state.password}
             onChange={this.onChange}
           ></input>
@@ -61,8 +62,13 @@ class Login extends Component {
   }
 }
 
+Login.propTypes = {
+  getAuthToken: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired
+}
+
 const mapStateToProps = state => ({
   user: state.auth.user
 })
 
-export default connect(mapStateToProps, {getAuthToken})(Login);
+export default connect(mapStateToProps, { getAuthToken })(Login);
