@@ -1,0 +1,2 @@
+export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
+export const GET_AUTH_TOKEN = 'GET_AUTH_TOKEN';
