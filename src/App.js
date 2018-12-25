@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 
 import AppRouter from './routing/AppRouter';
 
-import store from './redux/store';
+import store from './redux/Store';
 
-import HttpInterceptor from './config/httpInterceptor';
+import HttpInterceptor from './config/HttpInterceptor';
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     HttpInterceptor.setupInterceptors(store);
   }
 

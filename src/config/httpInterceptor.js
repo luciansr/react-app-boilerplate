@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { logoutUser } from '../redux/actions/authActions';
+import { logoutUser } from '../redux/actions/AuthActions';
 
 const ACCESS_TOKEN_KEY = process.env.REACT_APP_ACCESS_TOKEN_KEY;
 const AUTH_TOKEN_PREFIX = process.env.REACT_APP_AUTH_TOKEN_PREFIX;

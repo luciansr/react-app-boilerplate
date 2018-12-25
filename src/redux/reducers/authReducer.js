@@ -1,4 +1,4 @@
-import { GET_AUTH_TOKEN } from '../actions/actionTypes';
+import { GET_AUTH_TOKEN } from '../actions/ActionTypes';
 
 const initialState = {
     user: undefined,
