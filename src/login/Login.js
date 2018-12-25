@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Jumbotron, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { getAuthToken } from '../redux/actions/authActions';
@@ -64,11 +64,12 @@ class Login extends Component {
 
 Login.propTypes = {
   getAuthToken: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired
+  // user: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-  user: state.auth.user
+  user: state.auth.user,
+  authToken : state.auth.authToken
 })
 
 export default connect(mapStateToProps, { getAuthToken })(Login);

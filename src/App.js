@@ -6,7 +6,13 @@ import AppRouter from './routing/AppRouter';
 
 import store from './redux/store';
 
+import HttpInterceptor from './config/httpInterceptor';
+
 class App extends Component {
+  componentWillMount() {
+    HttpInterceptor.setupInterceptors(store);
+  }
+
   render() {
     return (
       <Provider store={store}>

@@ -21,10 +21,10 @@ class Editor extends Component {
     console.log('change',newValue);
   }
   render() {
-    const code = this.state.code;
-    const options = {
-      selectOnLineNumbers: true
-    };
+    // const code = this.state.code;
+    // const options = {
+    //   selectOnLineNumbers: true
+    // };
 
     return (
       <AceEditor

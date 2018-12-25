@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Link /*, Redirect*/ } from "react-router-dom";
 
 import Index from '../index/Index';
 import Login from '../login/Login';

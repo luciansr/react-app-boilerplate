@@ -1,14 +1,15 @@
-import { SUBMIT_LOGIN, GET_AUTH_TOKEN } from '../actions/actionTypes';
+import { GET_AUTH_TOKEN } from '../actions/actionTypes';
 
 const initialState = {
-    user: undefined
+    user: undefined,
+    authToken: undefined
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        // case SUBMIT_LOGIN:
-        //     break;
         case GET_AUTH_TOKEN:
+            console.log(action);
+            //saveAuthToken(action.payload);
             return {
                 ...state,
                 user: action.payload

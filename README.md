@@ -1,5 +1,9 @@
 # react-app-boilerplate
 
+## Where to create business logic?
+
+https://github.com/reduxjs/redux-thunk 
+
 ## Using different environments
 
 ```
