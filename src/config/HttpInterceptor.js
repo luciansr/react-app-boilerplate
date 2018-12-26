@@ -26,16 +26,13 @@ export default {
             // console.log(response);
             return response;
         }, (error) => {
+            const { response: { status } = {} } = error;
             console.log(error);
-            if (error.response.status === 401
-                || error.response.status === 403) {
+
+            if ([401, 403].includes(status)) {
                 store.dispatch(logoutUser());
             }
-            //catches if the session ended!
-            if (error.response.data.token.KEY === 'ERR_EXPIRED_TOKEN') {
-                console.log("EXPIRED TOKEN!");
-                store.dispatch(logoutUser());
-            }
+
             return Promise.reject(error);
         });
     }
